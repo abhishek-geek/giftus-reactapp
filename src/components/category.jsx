@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import url from "../services/config";
+// import url from "../services/config";
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 class Category extends Component {
   state = {
@@ -26,8 +27,7 @@ class Category extends Component {
     );
   }
   async componentDidMount() {
-    console.log(url + "api/categories/");
-    const { data: categories } = await axios.get(url + "api/categories/");
+    const { data: categories } = await axios.get("/categories/");
     this.setState({ categories });
   }
 }

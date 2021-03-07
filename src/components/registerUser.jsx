@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import auth from "../services/auth";
-import url from "../services/config";
-
+// import url from "../services/config";
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 class RegisterUser extends Component {
   state = {
     data: { name: "", email: "", password: "" },
@@ -82,7 +82,7 @@ class RegisterUser extends Component {
       email: this.state.email,
       password: this.state.password,
     };
-    const res = await axios.post(url + "api/users/", userData);
+    const res = await axios.post("/users/", userData);
     auth.setToken(res.headers["x-auth-token"]);
     window.location.assign("/");
   };

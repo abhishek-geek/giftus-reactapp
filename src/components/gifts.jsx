@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Gift from "./gift";
 import axios from "axios";
-import url from "../services/config";
+// import url from "../services/config";
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 class Gifts extends Component {
   state = {
@@ -47,9 +48,9 @@ class Gifts extends Component {
     }
   }
   async componentDidMount() {
-    const { data: gifts } = await axios.get(url + "api/gifts/");
+    const { data: gifts } = await axios.get("/gifts/");
     this.setState({ gifts: gifts });
-    const { data: categories } = await axios.get(url + "api/categories/");
+    const { data: categories } = await axios.get("/categories/");
     this.setState({ categories });
     const categoryId = this.props.match.params.category;
     this.filterGifts(categoryId);
