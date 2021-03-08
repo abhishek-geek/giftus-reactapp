@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
+import "../../node_modules/jquery/dist/jquery";
+import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 class Navbar extends Component {
   state = {
@@ -16,15 +19,40 @@ class Navbar extends Component {
           className="navbar-toggler"
           type="button"
           data-toggle="collapse"
-          data-target="/navbarSupportedContent"
+          data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon">
+            <div
+              style={{
+                width: "35px",
+                height: "5px",
+                backgroundColor: "black",
+                margin: "3px -2px",
+              }}
+            ></div>
+            <div
+              style={{
+                width: "35px",
+                height: "5px",
+                backgroundColor: "black",
+                margin: "3px -2px",
+              }}
+            ></div>
+            <div
+              style={{
+                width: "35px",
+                height: "5px",
+                backgroundColor: "black",
+                margin: "3px -2px",
+              }}
+            ></div>
+          </span>
         </button>
 
-        <div className="navbar-collapse" id="navbarSupportedContent">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto text-white">
             <li className="nav-item active">
               <NavLink className="nav-link" to="/">

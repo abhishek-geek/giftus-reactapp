@@ -7,7 +7,7 @@ const Home = () => {
     <section id="#header" className="home">
       <div className="container-fluid nav_bg">
         <div className="row">
-          <div className="col-md-6 pt-5 pt-lg-0 order-2 order-lg-1 ">
+          <div className="col-md-6 pt-5 pt-lg-0 order-1 order-lg-1 ">
             <h1>
               Choose best gifts for your loved ones with{" "}
               <strong className="bn">GiftUs..</strong>{" "}
@@ -20,7 +20,7 @@ const Home = () => {
               </Link>
             </div>
           </div>
-          <div className="col-lg-6 order-1 order-lg-2 header-img">
+          <div className="col-lg-6 order-2 order-lg-2 header-img">
             <img src={web} className="img-fluid animated" alt="homeimg" />
           </div>
         </div>
