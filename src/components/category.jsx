@@ -14,8 +14,12 @@ class Category extends Component {
       <div className="row">
         {categories.map((category) => (
           <div
-            className="col mr-5 styling"
-            style={{ border: "4px solid teal", margin: "5px" }}
+            className="col-12 mr-5"
+            style={{
+              textAlign: "center",
+              border: "4px solid teal",
+              margin: "5px",
+            }}
             key={category._id}
           >
             <Link to={`/gifts/${category._id}`}>
