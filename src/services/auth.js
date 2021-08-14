@@ -21,9 +21,11 @@ export function getCurrentUser() {
   }
 }
 
-export default {
+const ex = {
   logout,
   getCurrentUser,
   getToken,
   setToken,
-};
+}
+
+export default ex;
